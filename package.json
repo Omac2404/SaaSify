@@ -1,0 +1,16 @@
+{
+  "name": "saas-dashboard-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev -w packages/server\" \"npm run dev -w packages/client\"",
+    "build": "npm run build --workspaces",
+    "install:all": "npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}
